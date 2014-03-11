@@ -7,6 +7,33 @@
         <param name="plugin-logo">images/pluginLogo.png</param>
     </plugin-info>
 
+    <theme key="plain" name="Plain Web Theme 2.0" class="fi.polarshift.confluence.themes.PlainTheme">
+        <description>This is theme can be used to create spaces that are more like normar websites.</description>
+
+        <layout key="${project.groupId}.${project.artifactId}:main"/>
+        <layout key="${project.groupId}.${project.artifactId}:page"/>
+
+<!--        
+        <resource type="download" name="plain.css" location="styles/plain.css"/>
+        <resource type="download" name="plain-colors.css" location="styles/plain-colors.vm"/>
+        <colour-scheme key="${project.groupId}.${project.artifactId}:hy-colors"/>
+-->                
+        <resource name="themeicon.gif" type="download" location="images/pluginLogo.png">
+          <property key="content-type" value="image/gif"/>
+        </resource>
+     
+    </theme>
+
+    <layout key="main" name="Main Decorator" class="com.atlassian.confluence.themes.VelocityDecorator"
+            overrides="/decorators/main.vmd">
+        <resource type="velocity" name="decorator" location="/hy_templates/main.vmd"/>
+    </layout>
+
+    <layout key="page" name="Page Decorator" class="com.atlassian.confluence.themes.VelocityDecorator"
+            overrides="/decorators/page.vmd">
+        <resource type="velocity" name="decorator" location="/hy_templates/page.vmd"/>
+    </layout>
+
     <!-- add our i18n resource -->
     <resource type="i18n" name="i18n" location="hy-plain-theme"/>
     
