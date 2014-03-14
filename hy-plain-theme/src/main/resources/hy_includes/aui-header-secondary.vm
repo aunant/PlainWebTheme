@@ -1,0 +1,9 @@
+#set($isSpaceSearchEnabled = true)
+
+<ul class="aui-nav">
+        #menuMacros_renderHeaderRightImageLinks()
+    <li>#auiQuickSearch($isSpaceSearchEnabled, $spaceKey)</li>
+    <li>#menuMacros_renderAuiAdminMenu()</li>
+        #menuMacros_renderHeaderWorkDayLink()
+    <li>#menuMacros_renderAuiUserMenu()</li>
+</ul>

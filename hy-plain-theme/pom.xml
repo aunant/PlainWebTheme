@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>fi.polarshift.confluence</groupId>
     <artifactId>hy-plain-theme</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <organization>
         <name>Polar Shift Oy</name>

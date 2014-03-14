@@ -20,13 +20,17 @@ public class PlainTheme implements Theme {
     private String bodyClass;
     private String topNavLocation;
     private boolean hasSpaceSideBar;
+    public static final String DEFAULT_PLUGIN_KEY = "com.atlassian.confluence.themes.default";
+    public static final String STYLESHEET_NAME = "default-theme.css";
+    public static final String STYLESHEET_MODULE_KEY = DEFAULT_PLUGIN_KEY + ":styles";
 
     // Corresponds with the stylesheet declared in default-theme.xml.
     public static final String TOP_NAV_LOCATION = "";
 
     private static Theme instance = new PlainTheme();
+
     public ColourScheme getColourScheme() {
-        return null;
+        return colourScheme;
     }
 
     public ThemedDecorator getDecorator(String path) {
@@ -38,6 +42,7 @@ public class PlainTheme implements Theme {
 	    }
         return null;
     }
+
     public Collection<? extends ThemeResource> getStylesheets() {
         return stylesheets;
     }
@@ -45,7 +50,17 @@ public class PlainTheme implements Theme {
     public Collection<? extends ThemeResource> getJavascript() {
         return Collections.emptyList();
     }
+    /*
+    public Collection<? extends ThemeResource> getStylesheets()
+    {
+        return Collections.singletonList(new ClasspathThemeStylesheet(STYLESHEET_MODULE_KEY, STYLESHEET_NAME, "/includes/css/" + STYLESHEET_NAME));
+    }
 
+    public Collection<? extends ThemeResource> getJavascript()
+    {
+        return Collections.emptyList();
+    }
+    */
     public String getPluginKey() {
         return pluginKey;
     }

@@ -7,12 +7,25 @@
         <param name="plugin-logo">images/pluginLogo.png</param>
     </plugin-info>
 
+    <web-panel key="confluence-footer-workaround" name="Confluence Footer Workaround" location="atl.footer">
+      <description>Displays the Confluence standalone footer when the custom theme is enabled</description>    
+      <condition class="com.atlassian.confluence.plugin.descriptor.web.conditions.ActiveThemeCondition">
+        <param name="themes" value="${project.groupId}.${project.artifactId}:plain"/>
+      </condition>
+      <resource name="view" type="confluence-velocity" location="/decorators/includes/footer.vm">
+        <param name="source" value="webConextStatic"/>
+      </resource>
+    </web-panel>
+
     <theme key="plain" name="Plain Web Theme 2.0" class="fi.polarshift.confluence.themes.PlainTheme">
         <description>This is theme can be used to create spaces that are more like normar websites.</description>
 
         <layout key="${project.groupId}.${project.artifactId}:main"/>
         <layout key="${project.groupId}.${project.artifactId}:page"/>
 
+	<resource type="download" name="default-theme.css" location="/includes/css/default-theme.css">
+            <param name="source" value="webContext"/>
+        </resource>
 <!--        
         <resource type="download" name="plain.css" location="styles/plain.css"/>
         <resource type="download" name="plain-colors.css" location="styles/plain-colors.vm"/>
@@ -40,14 +53,12 @@
     <!-- add our web resources -->
     <web-resource key="hy-plain-theme-resources" name="hy-plain-theme Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
         <resource type="download" name="hy-plain-theme.css" location="/css/hy-plain-theme.css"/>
         <resource type="download" name="hy-plain-theme.js" location="/js/hy-plain-theme.js"/>
         <resource type="download" name="images/" location="/images"/>
-
         <context>hy-plain-theme</context>
     </web-resource>
-    
+
     <!-- import from the product container -->
     <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
     

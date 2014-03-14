@@ -19,6 +19,10 @@
          #requireResource("com.atlassian.confluence.plugins.confluence-space-ia:spacesidebar")
      #end
 
+<!-- hy muutokset alkaa - resurssit-->
+     #requireResourcesForContext("hy-plain-theme")
+<!-- hy muutokset loppuu - resurssit-->
+
      #parse("/decorators/includes/header.vm")
      $!settingsManager.globalSettings.customHtmlSettings.beforeHeadEnd
 
@@ -37,20 +41,29 @@
      <li><a href="#quick-search-query">$action.getText("assistive.skiplink.to.quick.search")</a></li>
 </ul>
 <div id="page">
-<div id="full-height-container hy_plain-container">
+<div id="full-height-container">
      <div id="header-precursor">
          <div class="cell">
              $!settingsManager.globalSettings.customHtmlSettings.afterBodyStart
                  #displayGlobalMessages()
          </div>
      </div>
+#if ($!action.remoteUser)
      #parse("/decorators/includes/common-header.vm")
-
+#else
+     #parse("hy_includes/anonymous_header.vm")
+#end
+<!-- hy muutokset alkaa - header/topNav -->
+<div id="hy_plain-banner">
+<img class="hy_plain-logo" src="$req.contextPath/$spaceManager.getLogoForSpace($spaceKey).getDownloadPath()">
+<div id="hy_plain-topNav">
+$helper.renderConfluenceMacro("{include:$spaceKey:topNav}")
+</div> <!-- hy_plain-topNav -->
+</div> <!-- hy_plain-banner -->
      #if($sitemeshPage.getProperty("page.tree"))
          #set($sidebarSettings = $studioSidebarHelper.getSettings($spaceKey))
          <div id="splitter">
          <div id="splitter-sidebar">
-	   Hakulaatikko:</br>
              $!sitemeshPage.getProperty("page.theme-navigation")
 
               #if ($!sidebarSettings.isTreeEnabled() == "true")
@@ -70,7 +83,16 @@
      <div class="ia-splitter">
      <div class="ia-splitter-left">
      <div class="ia-fixed-sidebar">
-     $!sitemeshPage.getProperty("page.ia-sidebar")
+<!-- hy muutokset alkaa - ei puuta -->
+<div id="hy_plain-leftNav">
+$helper.renderConfluenceMacro("{include:$spaceKey:leftNav}")
+</div>
+<div id="hy_plain-ia-sidebar">
+     #if ($permissionHelper.canEdit($action.remoteUser, $spaceManager.getSpace($spaceKey).getHomePage()))
+           $!sitemeshPage.getProperty("page.ia-sidebar")
+     #end
+</div>
+<!-- hy muutokset loppuu -->
      </div>
      </div>
      #end
