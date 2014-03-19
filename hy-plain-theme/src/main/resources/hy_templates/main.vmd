@@ -55,9 +55,16 @@
 #end
 <!-- hy muutokset alkaa - header/topNav -->
 <div id="hy_plain-banner">
-<img class="hy_plain-logo" src="$req.contextPath/$spaceManager.getLogoForSpace($spaceKey).getDownloadPath()">
+<img class="hy_plain-logo" src="$req.contextPath$spaceManager.getLogoForSpace($spaceKey).getDownloadPath()">
 <div id="hy_plain-topNav">
-$helper.renderConfluenceMacro("{include:$spaceKey:topNav}")
+     #set ($topres=$helper.renderConfluenceMacro("{include:$spaceKey:topNav}"))
+     #if ($topres.startsWith("<div"))
+<strong>$spaceManager.getSpace($spaceKey).getName()</strong>
+<p>$spaceManager.getSpace($spaceKey).getDescription().getBodyAsString()</p>
+     #else
+         $topres
+     #end
+
 </div> <!-- hy_plain-topNav -->
 </div> <!-- hy_plain-banner -->
      #if($sitemeshPage.getProperty("page.tree"))
@@ -85,7 +92,10 @@ $helper.renderConfluenceMacro("{include:$spaceKey:topNav}")
      <div class="ia-fixed-sidebar">
 <!-- hy muutokset alkaa - ei puuta -->
 <div id="hy_plain-leftNav">
-$helper.renderConfluenceMacro("{include:$spaceKey:leftNav}")
+     #set ($leftres=$helper.renderConfluenceMacro("{include:$spaceKey:leftNav}"))
+     #if (!$leftres.startsWith("<div"))
+         $leftres
+     #end
 </div>
 <div id="hy_plain-ia-sidebar">
      #if ($permissionHelper.canEdit($action.remoteUser, $spaceManager.getSpace($spaceKey).getHomePage()))
@@ -112,7 +122,11 @@ $helper.renderConfluenceMacro("{include:$spaceKey:leftNav}")
      <div id="main" class="$!personalClass aui-page-panel">
          #if ($sitemeshPage.getProperty("page.show-main-header") != "false")
          <div id="main-header">
+<!-- hy muutokset alkaa -->
+     #if ($!action.remoteUser)
              $!sitemeshPage.getProperty("page.content-navigation")
+     #end
+<!-- hy muutokset loppuu -->
              $!sitemeshPage.getProperty("global.dashboard-navigation")
              <div id="title-heading" class="pagetitle with-breadcrumbs">
                  #if ($sitemeshPage.getProperty("page.username"))
