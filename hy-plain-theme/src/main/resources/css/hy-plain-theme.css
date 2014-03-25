@@ -22,7 +22,11 @@ body {
       padding-bottom:10px;
 }
 /*vasemman reunan muotoilua*/
-#hy_plain-ia-sidebar {
+#hy_plain-scrollable-sidebar {
+      overflow-y: auto;
+      height: -webkit-calc(100% - 41px);
+      height: -moz-calc(100% - 41px);
+      height: calc(100% - 41px);
 }
 #hy_plain-leftNav {
      font-family: Gotham Narrow, Roboto, Arial, sans-serif;
@@ -162,6 +166,9 @@ body {
 blockquote {
       color: #979797;
 }
+#content.view {
+      max-width:850px;
+}
 .wiki-content,
 .wiki-content p,
 .wiki-content table,
@@ -173,7 +180,6 @@ blockquote {
 .wiki-content li {
       font-family: Georgia, serif;
       color: #606060;
-      max-width:850px;
 }
 .wiki-content h1 {
       font-family: Gotham Narrow, Roboto, Arial, sans-serif;
