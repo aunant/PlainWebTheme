@@ -95,6 +95,36 @@ body {
       text-transform:capitalize;
       font-family: Gotham Narrow, Roboto, Arial, sans-serif;
 }
+/*hy_n surunauha*/
+#com-atlassian-confluence.contenteditor.edit #hy_plain-topBar {
+    display: none;
+}
+#hy_plain-topBar {
+      width:100%;
+      height:60px;
+      background-color: #222222;
+}
+#hy_plain-topBar ul {
+      list-style:none;
+      overflow-x: hidden;
+      padding-left: 20px;
+}
+#hy_plain-topBar li {
+      background: transparent url(http://yliopisto.helsinki.fi/sites/all/themes/helsingin_yliopisto/images/clipart_menu_border.jpg) no-repeat 0px 13px !important; 
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      padding: 0px 30px 0px 30px;
+      height:60px;
+}
+#hy_plain-topBar a {
+      display:block;
+      width:auto;
+      text-transform: uppercase;
+      color: #fff !important;
+      font-weight: bold;
+      font-size: 1.1em;
+}
 /*footerin asemointi ja sivun alareuna*/
 #footer {
       width: auto;
@@ -143,6 +173,7 @@ blockquote {
 .wiki-content li {
       font-family: Georgia, serif;
       color: #606060;
+      max-width:850px;
 }
 .wiki-content h1 {
       font-family: Gotham Narrow, Roboto, Arial, sans-serif;
