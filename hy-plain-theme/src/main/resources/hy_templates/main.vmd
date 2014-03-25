@@ -64,9 +64,15 @@
      #else
          $topres
      #end
-
 </div> <!-- hy_plain-topNav -->
 </div> <!-- hy_plain-banner -->
+<div id="hy_plain-topBar">
+     #set ($topres2=$helper.renderConfluenceMacro("{include:$spaceKey:topBar}"))
+     #if (!$topres2.startsWith("<div"))
+         $topres2
+     #end
+</div> <!-- hy_plain-topBar -->
+
      #if($sitemeshPage.getProperty("page.tree"))
          #set($sidebarSettings = $studioSidebarHelper.getSettings($spaceKey))
          <div id="splitter">
@@ -90,7 +96,7 @@
      <div class="ia-splitter">
      <div class="ia-splitter-left">
      <div class="ia-fixed-sidebar">
-<!-- hy muutokset alkaa - ei puuta -->
+<!-- hy muutokset alkaa - leftNav -->
 <div id="hy_plain-leftNav">
      #set ($leftres=$helper.renderConfluenceMacro("{include:$spaceKey:leftNav}"))
      #if (!$leftres.startsWith("<div"))

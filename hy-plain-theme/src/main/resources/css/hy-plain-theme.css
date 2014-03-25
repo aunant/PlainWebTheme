@@ -3,12 +3,14 @@
       background-color:#fff !important;
 }
 body {
-     background-color:#fff;
+      background-color:#fff;
 }
+#signup-link {  
+      display:none;  
+}  
 /*murupolku ja sivun metadata*/
 #breadcrumb-section {
      text-transform:uppercase;
-     font-family: Roboto, Georgia, serif;
 }
 #title-text {
       display:none;
@@ -23,11 +25,11 @@ body {
 #hy_plain-ia-sidebar {
 }
 #hy_plain-leftNav {
-     font-family: Roboto, Georgia, serif;
+     font-family: Gotham Narrow, Roboto, Arial, sans-serif;
 }
 #hy_plain-leftNav ul {
       list-style:none;
-      padding: 5px 5px 5px 20px;
+      padding: 0px 5px 5px 20px;
 }
 #hy_plain-leftNav li {
       line-height:150%
@@ -70,26 +72,28 @@ body {
       width:auto;
       height:130px;
       float:left;
-      margin:10px;
+      margin:10px; /*login suoja-alue*/
 }
 #hy_plain-topNav {
       width:auto;
       height:auto;
       float:right;
-      margin: 10px;
+      margin: 10px 20px 10px 10px;
       text-align: right;
-      font-family: Roboto, Georgia, serif;
-
+      font-family: Gotham Narrow, Roboto, Arial, sans-serif;
 }
 #hy_plain-topNav ul {
       list-style:none;      
 }
 #hy_plain-topNav strong {
+      font-family: Gotham Narrow, Roboto, Arial, sans-serif;
       text-transform:uppercase;
       font-size:2.0em;
+      color: #4d4d4d;
 }
 #hy_plain-topNav p {
       text-transform:capitalize;
+      font-family: Gotham Narrow, Roboto, Arial, sans-serif;
 }
 /*footerin asemointi ja sivun alareuna*/
 #footer {
@@ -98,16 +102,12 @@ body {
 }
 #likes-and-labels-container {
      display: none;
-}
-#labels-section {
+}#labels-section {
       display: none;
 }
 /*sisällön muotoilua*/
-.wiki-content {
-     font-family: Roboto, Georgia, serif;
-}
 #wysiwyg {
-     font-family: Roboto, Georgia, serif;
+     font-family: Georgia, serif;
 }
 .aui-message.hint {
       background: #fcfcfc;
@@ -141,9 +141,11 @@ blockquote {
 .wiki-content ol,
 .wiki-content ul,
 .wiki-content li {
+      font-family: Georgia, serif;
       color: #606060;
 }
 .wiki-content h1 {
+      font-family: Gotham Narrow, Roboto, Arial, sans-serif;
       text-transform:uppercase;
 }
 .wiki-content h1,.wiki-content h2,.wiki-content h3, .wiki-content h4, .wiki-content h5, .wiki-content h6 {
@@ -169,7 +171,12 @@ blockquote {
       color: #005a7a !important;
       text-decoration:line-through !important;
 }
+/*
 .aui-header .aui-dropdown2-trigger, #header .aui-header .aui-nav-link, #header .aui-header .aui-nav-imagelink, #header .aui-header a {
+      color: #fff !important;
+}
+*/
+.aui-header .aui-dropdown2-trigger, #header .aui-header .aui-nav-link, #header .aui-header .aui-nav-imagelink {
       color: #fff !important;
 }
 .content-navigation.view .ajs-menu-bar li.ajs-menu-item a, .content-navigation.view .ajs-menu-bar li.ajs-button a, .content-navigation.pages-collector .ajs-menu-bar li.ajs-menu-item a, .content-navigation.pages-collector .ajs-menu-bar li.ajs-button a, .content-navigation.view-blogposts .ajs-menu-bar li.ajs-menu-item a, .content-navigation.view-blogposts .ajs-menu-bar li.ajs-button a, .content-navigation.view-attachments .ajs-menu-bar li.ajs-menu-item a, .content-navigation.view-attachments .ajs-menu-bar li.ajs-button a, .content-navigation.view-attachment .ajs-menu-bar li.ajs-menu-item a, .content-navigation.view-attachment .ajs-menu-bar li.ajs-button a, .content-navigation.view-information .ajs-menu-bar li.ajs-menu-item a, .content-navigation.view-information .ajs-menu-bar li.ajs-button a {
