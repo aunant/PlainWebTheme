@@ -54,6 +54,7 @@
      #parse("hy_includes/anonymous_header.vm")
 #end
 <!-- hy muutokset alkaa - header/topNav -->
+#if ($spaceKey)
 <div id="hy_plain-banner">
 <img class="hy_plain-logo" src="$req.contextPath$spaceManager.getLogoForSpace($spaceKey).getDownloadPath()">
 <div id="hy_plain-topNav">
@@ -66,12 +67,14 @@
      #end
 </div> <!-- hy_plain-topNav -->
 </div> <!-- hy_plain-banner -->
-<div id="hy_plain-topBar">
+
      #set ($topres2=$helper.renderConfluenceMacro("{include:$spaceKey:topBar}"))
      #if (!$topres2.startsWith("<div"))
+<div id="hy_plain-topBar">
          $topres2
-     #end
 </div> <!-- hy_plain-topBar -->
+#end <!--if spaceKey -->
+     #end
 
      #if($sitemeshPage.getProperty("page.tree"))
          #set($sidebarSettings = $studioSidebarHelper.getSettings($spaceKey))
