@@ -46,7 +46,7 @@
         <resource type="download" name="images/" location="/images"/>
         <context>hy-plain-theme</context>
     </web-resource>
-
+<!--
     <web-resource key="ga-resourses" name="GA Web Resources">
       <dependency>com.atlassian.auiplugin:ajs</dependency>
       <resource type="download" name="ga.js" location="/js/ga.js"/>
@@ -58,7 +58,7 @@
       <resource type="download" name="ga-mobile.js" location="/js/ga-mobile.js"/>
       <context>ga-resources-mobile</context>
     </web-resource>
-
+-->
     <xhtml-macro key="hy-ga" name="gatracking" class="fi.polarshift.confluence.GAMacro">
       <category name="admin"/>
       <parameters>

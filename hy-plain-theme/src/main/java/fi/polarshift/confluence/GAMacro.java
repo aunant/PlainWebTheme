@@ -26,12 +26,12 @@ public class GAMacro implements Macro {
 	    uaid = parameters.get(UAID);
 	else
 	    return "";
-
+	/*
 	if ("mobile".equals(conversionContext.getPropertyAsString("output-device-type")))
 	    webResourceManager.requireResourcesForContext("ga-resources-mobile");
 	else
 	    webResourceManager.requireResourcesForContext("ga-resources");
-     
+	*/
 	return "<div id=\"tracking-code\" style=\"display: none;\">"+uaid+"</div>";	       
     }
     

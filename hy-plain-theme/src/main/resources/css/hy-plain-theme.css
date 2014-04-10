@@ -7,13 +7,22 @@ body {
 }
 #signup-link {  
       display:none;  
-}  
+}
+.aui-header .aui-quicksearch input {
+      width:238px;
+}
 /*murupolku ja sivun metadata*/
 #breadcrumb-section {
      text-transform:uppercase;
 }
 #title-text {
       display:none;
+}
+.spacetools #title-text {
+      display:inline;
+}
+.spacetools.with-space-sidebar #main-header {
+      background-color: #fff;
 }
 .page-metadata {
       display:none;
@@ -34,11 +43,28 @@ body {
      margin-top: 18px;
 }
 #hy_plain-leftNav ul {
-      list-style:none;
+      list-style: none;
       padding: 0px 5px 5px 20px;
+      margin-left: 20px;
+      display: block;
+      border-left: 1px solid #eaeaea;
 }
 #hy_plain-leftNav li {
-      line-height:150%
+      line-height:1.25em;
+      height: 22px;
+      padding-top:20px;
+}
+#hy_plain-leftNav a {
+      font-family: 'Gotham Narrow A','Gotham Narrow B',Helvetica,Arial,sans-serif,Nimbus Sans L;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 0.938em;
+      color: #797979 !important;
+      text-transform: none;
+      display: block;
+}
+#hy_plain-leftNav a:hover {
+      color: #015a82 !important;      
 }
 .expand-collapse-trigger {
       display: none !important;
@@ -75,11 +101,14 @@ body {
 #com-atlassian-confluence.contenteditor.edit #hy_plain-banner {
     display: none;
 }
+#com-atlassian-confluence.contenteditor.create #hy_plain-banner {
+    display: none;
+}
 #hy_plain-banner .hy_plain-logo {
       width:auto;
       height:130px;
       float:left;
-      margin:10px; /*login suoja-alue*/
+      margin:20px; /*logon suoja-alue*/
 }
 #hy_plain-topNav {
       width:auto;
@@ -99,11 +128,13 @@ body {
       color: #4d4d4d;
 }
 #hy_plain-topNav p {
-      text-transform:capitalize;
       font-family: Gotham Narrow, Roboto, Arial, sans-serif;
 }
 /*hy_n surunauha*/
 #com-atlassian-confluence.contenteditor.edit #hy_plain-topBar {
+    display: none;
+}
+#com-atlassian-confluence.contenteditor.create #hy_plain-topBar {
     display: none;
 }
 #hy_plain-topBar {
@@ -118,8 +149,6 @@ body {
 }
 #hy_plain-topBar li {
 background: transparent url(/download/resources/fi.polarshift.confluence.hy-plain-theme:hy-plain-theme-resources/images/clipart_menu_border.jpg) no-repeat 0px 13px !important; 
-
-/*      background: transparent url(http://yliopisto.helsinki.fi/sites/all/themes/helsingin_yliopisto/images/clipart_menu_border.jpg) no-repeat 0px 13px !important; */
       display: table-cell;
       vertical-align: middle;
       text-align: center;
@@ -161,12 +190,8 @@ background: transparent url(/download/resources/fi.polarshift.confluence.hy-plai
       border-color: #91c89c;
 }
 .aui-message.warning {
-/*
       background: #fffdf6;
       border-color: #fffeaae;
-*/
-      background: #fcd116;
-      border-color: #fca311;
 }
 blockquote {
       color: #979797;

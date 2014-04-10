@@ -1,5 +1,8 @@
-#set($isSpaceSearchEnabled = true)
-
+#if($docThemeHelper)
+    #set($isSpaceSearchEnabled = $docThemeHelper.isSpaceSearchEnabled($spaceKey))
+#else
+    #set($isSpaceSearchEnabled = false)
+#end
 <ul class="aui-nav">
         #menuMacros_renderHeaderRightImageLinks()
     <li>#auiQuickSearch($isSpaceSearchEnabled, $spaceKey)</li>

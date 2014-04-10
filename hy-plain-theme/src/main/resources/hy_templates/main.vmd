@@ -48,12 +48,13 @@
                  #displayGlobalMessages()
          </div>
      </div>
+<!-- hy muutokset alkaa - header/topNav -->
 #if ($!action.remoteUser)
      #parse("/decorators/includes/common-header.vm")
 #else
      #parse("hy_includes/anonymous_header.vm")
 #end
-<!-- hy muutokset alkaa - header/topNav -->
+
 #if ($spaceKey)
 <div id="hy_plain-banner">
 <img class="hy_plain-logo" src="$req.contextPath$spaceManager.getLogoForSpace($spaceKey).getDownloadPath()">
