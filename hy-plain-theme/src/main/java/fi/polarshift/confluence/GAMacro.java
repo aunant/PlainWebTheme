@@ -32,6 +32,7 @@ public class GAMacro implements Macro {
 	else
 	    webResourceManager.requireResourcesForContext("ga-resources");
 	*/
+	///jemmataan Google Analyticsin koodi näymättämän divin runkoon, mistä se on helppo javascriptillö poimia
 	return "<div id=\"tracking-code\" style=\"display: none;\">"+uaid+"</div>";	       
     }
     

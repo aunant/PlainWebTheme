@@ -48,7 +48,7 @@
                  #displayGlobalMessages()
          </div>
      </div>
-<!-- hy muutokset alkaa - header/topNav -->
+<!-- hy muutokset alkaa - header/topNav ja topBar -->
 #if ($!action.remoteUser)
      #parse("/decorators/includes/common-header.vm")
 #else
@@ -75,6 +75,7 @@
          $topres2
 </div> <!-- hy_plain-topBar -->
 #end <!--if spaceKey -->
+<!-- hy muutokset loppuu - header/topNav ja topBar -->
      #end
 
      #if($sitemeshPage.getProperty("page.tree"))

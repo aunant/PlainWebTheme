@@ -50,17 +50,6 @@ public class PlainTheme implements Theme {
     public Collection<? extends ThemeResource> getJavascript() {
         return Collections.emptyList();
     }
-    /*
-    public Collection<? extends ThemeResource> getStylesheets()
-    {
-        return Collections.singletonList(new ClasspathThemeStylesheet(STYLESHEET_MODULE_KEY, STYLESHEET_NAME, "/includes/css/" + STYLESHEET_NAME));
-    }
-
-    public Collection<? extends ThemeResource> getJavascript()
-    {
-        return Collections.emptyList();
-    }
-    */
     public String getPluginKey() {
         return pluginKey;
     }
