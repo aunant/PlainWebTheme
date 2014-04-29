@@ -18,7 +18,7 @@
     </web-panel>
 
     <theme key="plain" name="Plain Web Theme 2.0" class="fi.polarshift.confluence.themes.PlainTheme">
-        <description>This is theme can be used to create spaces that are more like normar websites.</description>
+        <description>This is a theme that can be used to create pages that look like normal web pages.</description>
 
         <layout key="${project.groupId}.${project.artifactId}:main"/>
 	<resource type="download" name="default-theme.css" location="/includes/css/default-theme.css">

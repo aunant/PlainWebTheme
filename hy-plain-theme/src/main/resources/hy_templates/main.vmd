@@ -75,8 +75,8 @@
          $topres2
 </div> <!-- hy_plain-topBar -->
 #end <!--if spaceKey -->
-<!-- hy muutokset loppuu - header/topNav ja topBar -->
      #end
+<!-- hy muutokset loppuu - header/topNav ja topBar -->
 
      #if($sitemeshPage.getProperty("page.tree"))
          #set($sidebarSettings = $studioSidebarHelper.getSettings($spaceKey))
@@ -101,8 +101,9 @@
      <div class="ia-splitter">
      <div class="ia-splitter-left">
      <div class="ia-fixed-sidebar">
-     <div id="hy_plain-scrollable-sidebar">
+        
 <!-- hy muutokset alkaa - leftNav -->
+<div id="hy_plain-scrollable-sidebar">
 <div id="hy_plain-leftNav">
      #set ($leftres=$helper.renderConfluenceMacro("{include:$spaceKey:leftNav}"))
      #if (!$leftres.startsWith("<div"))

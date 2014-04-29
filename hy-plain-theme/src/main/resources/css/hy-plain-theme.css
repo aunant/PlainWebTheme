@@ -75,9 +75,9 @@ body {
 .acs-side-bar .acs-side-bar-space-info .avatar {
       display: none !important;
 }
-.acs-side-bar .acs-side-bar-space-info .name {
+/* .acs-side-bar .acs-side-bar-space-info .name {
       padding:0 0 0 20px !important;
-}
+} */
 .ia-splitter-handle {
       display: none !important;
 }
@@ -170,13 +170,15 @@ background: transparent url(/download/resources/fi.polarshift.confluence.hy-plai
 }
 #likes-and-labels-container {
      display: none;
-}#labels-section {
+}
+#labels-section {
       display: none;
 }
 /*sisällön muotoilua*/
 #wysiwyg {
      font-family: Georgia, serif;
 }
+/* 
 .aui-message.hint {
       background: #fcfcfc;
       border-color: #aab8c6;
@@ -193,6 +195,7 @@ background: transparent url(/download/resources/fi.polarshift.confluence.hy-plai
       background: #fffdf6;
       border-color: #fffeaae;
 }
+*/
 blockquote {
       color: #979797;
 }
