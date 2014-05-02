@@ -97,7 +97,6 @@
              $!sitemeshPage.getProperty("page.theme-header")
          #end
      #elseif ($useNewSpaceIA && $sitemeshPage.getProperty("page.ia-sidebar"))
-
      <div class="ia-splitter">
      <div class="ia-splitter-left">
      <div class="ia-fixed-sidebar">
