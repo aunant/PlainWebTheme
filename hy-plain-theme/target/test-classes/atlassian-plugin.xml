@@ -1,0 +1,14 @@
+<atlassian-plugin key="fi.polarshift.confluence.hy-plain-theme-tests" name="Plain Web Theme 2" plugins-version="2">
+    <plugin-info>
+        <description>This is a Plain Web Theme for Helsinki University.</description>
+        <version>2.0.3</version>
+        <vendor name="Polar Shift Oy" url="http://www.polarshift.fi/" />
+    </plugin-info>
+
+    <!-- from our base plugin -->
+    <component-import key="myComponent" interface="fi.polarshift.confluence.MyPluginComponent"/>
+
+    <!-- from the product container -->
+    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+    
+</atlassian-plugin>
