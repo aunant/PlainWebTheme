@@ -10,7 +10,7 @@ body {
 
 /* Leipiksen säätöä */
 div#main-content {
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.5em;
 }
 div#main-content p,
@@ -18,6 +18,14 @@ div#main-content ul,
 div#main-content ol {
   font-family: Georgia, serif;
   margin: 1em 0;
+}
+  div#main-content li ul,
+  div#main-content li ol {
+    margin: 0;
+  }
+
+div#main-content code {
+  font-size: 0.9em;
 }
 
 /* Joillekin palikoille kuitenkin Gotham */
@@ -62,6 +70,7 @@ h1#title-text {
 }
 
 
+
 /* ------------ */
 /* Sivupalkki */
 /* ------------ */
@@ -95,15 +104,4 @@ div.name a:hover {
 /* Sivupalkin väliotsikkojan väri */
 h5.ia-quick-links-header-title {
   color: #005a7a;
-}
-
-/* ------------ */
-/* Alatunniste */
-/* ------------ */
-div#footer {
-  background-color: #222 !important;
-}
-div#footer *,
-div#footer a {
-  color: #fff !important;
 }
