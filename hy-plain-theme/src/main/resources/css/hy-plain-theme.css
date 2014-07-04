@@ -199,9 +199,11 @@ background: transparent url(/download/resources/fi.polarshift.confluence.hy-plai
 blockquote {
       color: #979797;
 }
+/* kommentoin sivun leveysrajoituksen kokonaan pois, oli alunperin 850px
 #content.view {
       max-width:1250px;
 }
+*/
 .wiki-content,
 .wiki-content p,
 .wiki-content table,
