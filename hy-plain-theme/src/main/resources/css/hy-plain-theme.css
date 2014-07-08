@@ -223,7 +223,7 @@ blockquote {
 .wiki-content h1,.wiki-content h2,.wiki-content h3, .wiki-content h4, .wiki-content h5, .wiki-content h6 {
       color: #4d4d4d;
 }
-/*linkit*/
+/*linkit kommentoitu kaikki pois
 .aui-theme-default a {
       color: #0097cd !important;
 }
@@ -247,6 +247,7 @@ blockquote {
 .aui-header .aui-dropdown2-trigger, #header .aui-header .aui-nav-link, #header .aui-header .aui-nav-imagelink, #header .aui-header a {
       color: #fff !important;
 }
+*/
 */
 .aui-header .aui-dropdown2-trigger, #header .aui-header .aui-nav-link, #header .aui-header .aui-nav-imagelink {
       color: #fff !important;
