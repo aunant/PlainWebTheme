@@ -2,9 +2,12 @@
 /* Globaalit säädöt */
 /* ------------ */
 
-/* Oletusfontti Gothamiksi */
+/* Oletusfontti Open Sansiksi */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
+
 body {
-  font-family: 'Gotham Narrow A','Gotham Narrow B',Helvetica,Arial,sans-serif,Nimbus Sans L;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, 'Nimbus Sans L';
   color: #444;
 }
 
@@ -28,12 +31,19 @@ div#main-content code {
   font-size: 0.9em;
 }
 
-/* Joillekin palikoille kuitenkin Gotham */
+/* Joillekin palikoille kuitenkin Open Sans */
 div#main-content div.information-macro *,
 div#main-content div.panel *,
 div#main-content ul.inline-task-list,
-div#main-content div.toc-macro ul {
-  font-family: 'Gotham Narrow A','Gotham Narrow B',Helvetica,Arial,sans-serif,Nimbus Sans L;
+div#main-content div.toc-macro ul,
+div#main-content div.update-item-meta,
+div#main-content div.plugin_pagetree ul,
+div#main-content table * {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, 'Nimbus Sans L';
+}
+
+div#main-content table p {
+  margin: 0;
 }
 
 /* hover-väri linkeille*/
