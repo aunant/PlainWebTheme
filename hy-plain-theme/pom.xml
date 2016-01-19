@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>fi.polarshift.confluence</groupId>
     <artifactId>hy-plain-theme</artifactId>
-    <version>2.0.4</version>
+    <version>2.0.6</version>
 
     <organization>
         <name>Polar Shift Oy</name>
@@ -75,9 +75,9 @@
     </build>
 
     <properties>
-        <confluence.version>5.4.3</confluence.version>
-        <confluence.data.version>5.4.3</confluence.data.version>
-        <amps.version>4.2.18</amps.version>
+        <confluence.version>5.8.18</confluence.version>
+        <confluence.data.version>5.8.18</confluence.data.version>
+        <amps.version>6.2.1</amps.version>
         <plugin.testrunner.version>1.1.4</plugin.testrunner.version>
     </properties>
 

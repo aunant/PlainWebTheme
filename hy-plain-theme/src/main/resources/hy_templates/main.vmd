@@ -31,7 +31,7 @@
 ## HTML HEADER ENDS
 
 ## HTML BODY BEGINS
-<body #onLoadAttr() id="com-atlassian-confluence" class="$!theme.bodyClass $!sitemeshPage.getProperty("page.bodyClass") aui-layout aui-theme-default">
+<body #onLoadAttr() id="com-atlassian-confluence" class="#if (!$darkFeatures.isFeatureEnabled("lighter-editor-v1-disable")) lighter-editor #end $!theme.bodyClass $!sitemeshPage.getProperty("page.bodyClass") aui-layout aui-theme-default">
 #parse ("/decorators/includes/main-content-includes.vm")
 <ul id="assistive-skip-links" class="assistive">
      <li><a href="#title-heading">$action.getText("assistive.skiplink.to.content")</a></li>
@@ -185,7 +185,7 @@
              #end
              #if ($sitemeshPage.getProperty("page.sidebar"))
                  #skiplink("sidebar" $i18n.getText("assistive.skiplink.to.sidebar.start") $i18n.getText("assistive.skiplink.to.sidebar.end"))
-                     <div id="sidebar" class="aui-message hint">
+                     <div id="sidebar-help-tip">
                          $!sitemeshPage.getProperty("page.sidebar")
                      </div><!-- \#sidebar -->
                  #end
